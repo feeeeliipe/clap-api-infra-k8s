@@ -16,6 +16,7 @@ jobs:
         uses: imranismail/setup-kustomize@v1
       - name: Set new version to K8s manifest
         run: |
+          ls
           cd k8s/
           kustomize edit set image clap-api=${{ inputs.newImage }}
       - name: Commit updates on K8s manifest
