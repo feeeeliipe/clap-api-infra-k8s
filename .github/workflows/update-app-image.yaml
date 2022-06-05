@@ -11,9 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.4.0
+        name: Checkout infra repository
         with:
           repository: feeeeliipe/clap-api-infra-k8s
           ref: main
+          fetch-depth: 0
       - name: Setup Kustomize
         uses: imranismail/setup-kustomize@v1
       - name: Set new version to K8s manifest
