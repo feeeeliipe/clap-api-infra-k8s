@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v1
+        with:
+          name: feeeeliipe/clap-api
       - name: Setup Kustomize
         uses: imranismail/setup-kustomize@v1
       - name: Set new version to K8s manifest
