@@ -30,5 +30,6 @@ jobs:
           git add .
           git commit -m "Updating k8s manifest with new version"
       - name: Push Changes
-        uses: ad-m/github-push-action@master
+        run: |
+          git push origin main
   
