@@ -18,7 +18,7 @@ metadata:
     app: clap-api
   name: clap-api-deployment
 spec:
-  replicas: 2
+  replicas: 10
   selector:
     matchLabels:
       app: clap-api
