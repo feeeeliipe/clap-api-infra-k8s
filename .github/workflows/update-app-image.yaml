@@ -10,10 +10,10 @@ jobs:
   update-manifest:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2.4.0
         with:
-          name: feeeeliipe/clap-api-infra-k8s
-          ref: refs/heads/main
+          repository: feeeeliipe/clap-api-infra-k8s
+          ref: main
       - name: Setup Kustomize
         uses: imranismail/setup-kustomize@v1
       - name: Set new version to K8s manifest
