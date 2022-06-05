@@ -5,6 +5,9 @@ on:
       newImage:
         required: true
         type: string
+    secrets:
+      GH_TOKEN:
+        required: true
 
 jobs:
   update-manifest:
@@ -16,6 +19,7 @@ jobs:
           repository: feeeeliipe/clap-api-infra-k8s
           ref: main
           fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
       - name: Setup Kustomize
         uses: imranismail/setup-kustomize@v1
       - name: Set new version to K8s manifest
